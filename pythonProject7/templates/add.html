@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO APP</title>
+</head>
+<body>
+<h1> TODOS</h1>
+<u1>
+    {% for todo in todos %}
+    <li> {{ todo['todo']}}</li>
+    {% endfor %}
+</u1>
+<form action="{{ url_for('add' }}" method = "POST">
+    <input type="text" name="todo">
+    <button type="submit"> ADD TODO</button>
+
+
+</form>
+</body>
+</html>
